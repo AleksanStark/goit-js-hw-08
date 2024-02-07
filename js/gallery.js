@@ -69,6 +69,7 @@ const listOfGallery = document.querySelector(".gallery");
 const markup = images
   .map((img) => {
     return `<li class="gallery-item">
+    <a href="${img.original}" class="gallery-link">
         <img
           class="gallery-image"
           src="${img.preview}"
@@ -77,6 +78,7 @@ const markup = images
           width="360"
           height="200"
         />
+    </a>
     </li>`;
   })
   .join("");
@@ -85,7 +87,10 @@ listOfGallery.insertAdjacentHTML("beforeend", markup);
 
 listOfGallery.addEventListener("click", selectImage);
 
+const galleryLink = querySelector(".gallery-link");
+
 function selectImage(event) {
+  event.preventDefault();
   if (event.target.nodeName !== "IMG") {
     return;
   }
