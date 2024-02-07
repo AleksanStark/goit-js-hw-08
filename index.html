@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      .container {
+        max-width: 1280px;
+        padding: 0 16px;
+        margin: 0 auto;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 0;
+      }
+
+      .gallery-image {
+        transition: transform 250ms ease-in-out;
+        cursor: pointer;
+      }
+
+      .gallery-image:hover {
+        transform: scale(1.1);
+      }
+    </style>
+    <div class="container"><ul class="gallery"></ul></div>
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"
+    ></script>
+    <script defer src="./gallery.js"></script>
+  </body>
+</html>
