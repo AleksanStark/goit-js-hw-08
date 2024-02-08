@@ -87,8 +87,6 @@ listOfGallery.insertAdjacentHTML("beforeend", markup);
 
 listOfGallery.addEventListener("click", selectImage);
 
-const galleryLink = querySelector(".gallery-link");
-
 function selectImage(event) {
   event.preventDefault();
   if (event.target.nodeName !== "IMG") {
